@@ -12,15 +12,15 @@ public class IntroSequence : MonoBehaviour
 
     private string[] lines = new string[]
     {
-        "¿Qué… qué es este lugar? El aire es denso, como si estuviera respirando cenizas. No es mi casa… y sin embargo, todo me recuerda a ella.",
-        "???: No te engañes, Gabriel. No es tu casa lo que ves, sino la cicatriz de tu alma. Has despertado en el purgatorio.",
-        "Gabriel: El purgatorio… ¿como en los versos que aprendí de niño? Dante, las terrazas, los pecados… ¿es esto un castigo o un sueño febril?",
+        "¿Qué… qué es este lugar? El aire es denso, como si respirara cenizas. No es mi casa… y aun así, cada rincón parece un eco de ella",
+        "???: No te engañes, Gabriel. No estás viendo paredes ni muebles, sino el reflejo herido de tu alma. Este sitio no pertenece a ningún mundo que recuerdes. Has despertado en el Purgatorio.",
+        "Gabriel: ¿El purgatorio… como los versos que aprendí de niño? Las terrazas, los pecados, la subida… ¿Es esto un castigo? ¿Un delirio?",
         "???: No es castigo, ni tampoco sueño. Es camino. El purgatorio es un umbral, un lugar de tránsito. Aquí las almas vienen a expiar lo que las ata, a enfrentar aquello que ocultaron hasta de sí mismas. Solo así, el peso se vuelve liviano y la subida posible.",
         "Gabriel: Entonces… estoy muerto. Lo último que recuerdo es el estruendo de un choque, el vidrio quebrándose, y después… oscuridad.",
         "???: Muerte? Llámalo como quieras. Aquí lo importante no es cómo llegaste, sino si sabrás salir. Has cargado con culpas, orgullos y silencios demasiado tiempo. El purgatorio no los olvida.",
         "Gabriel: ¿Y tú… quién eres para guiarme?",
         "???: Un compañero de viaje, conocido como Virgilio. Ya estuve aquí, hace siglos, con otro que creyó poder escribir la verdad de este lugar. Dante lo llamó Comedia. Pero tú bien sabes, Gabriel, que los libros mienten… o callan. Aquí verás lo que ni él se atrevió a poner en sus cantos.",
-        "Virgilio: El camino será largo y pesado, pero no estarás solo. Yo caminaré contigo. Prepárate: deberás mirar lo que negaste, aceptar lo que rechazaste y elegir qué parte de ti merece permanecer. Recuerda esto: cada decisión tendrá un eco.",
+        "Virgilio: Tu alma está repartida en fragmentos.\nLos objetos que ves no son cosas: son heridas. Recuerdos quebrados. Espejos que muestran lo que evitaste.\nEnfréntalos, uno a uno. Cada elección que hagas resonará… y el eco puede salvarte o hundirte",
         "Virgilio: Camina con WASD. Acércate y presiona E para enfrentar lo que se esconde en los objetos. El viaje ya comenzó."
     };
 

@@ -52,7 +52,7 @@ public class FogController : MonoBehaviour
             t += Time.deltaTime;
             yield return null;
         }
-        // volver lentamente
+
         t = 0f;
         while (t < 1.2f)
         {

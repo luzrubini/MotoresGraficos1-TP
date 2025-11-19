@@ -32,7 +32,6 @@ public class InteractionObject : MonoBehaviour
             return;
         }
 
-        // Si ya interactuó y puede revelar la verdad (después de hablar con Virgilio)
         if (alreadyInteracted && !revealedTruth && DialogueManager.Instance.virgilioAfterAllObjects)
         {
             RevealTruth();
@@ -40,14 +39,12 @@ public class InteractionObject : MonoBehaviour
             return;
         }
 
-        // Si ya interactuó pero aún no puede revelar la verdad
         if (alreadyInteracted && !revealedTruth)
         {
             DialogueManager.Instance.ShowTemporaryMessage(falseMemory, 4f);
             return;
         }
 
-        // Primera interacción con el objeto
         DialogueManager.Instance.StartInteraction(this);
         alreadyInteracted = true;
     }
@@ -58,10 +55,8 @@ public class InteractionObject : MonoBehaviour
         if (revealedTruth) return;
         revealedTruth = true;
 
-        // Registrar en MemoryPuzzleManager
         MemoryPuzzleManager.Instance.RegisterTruth(objectName, keyword, trueMemory, this);
 
-        // Notificar al espejo
         MirrorController.Instance.UpdateMirror(keyword, trueMemory);
     }
 }

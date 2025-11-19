@@ -2,28 +2,35 @@ using UnityEngine;
 
 public class CameraSwitcher : MonoBehaviour
 {
-    public Camera[] cameras;  // Arrastrá tus 3 cámaras acá
-    private int currentIndex = 0;
+    public Camera cam1;
+    public Camera cam2;
+    public Camera cam3;
 
-    void Start()
+    private int currentCamera = 1;
+
+    private void Start()
     {
-        // Desactiva todas menos la primera
-        for (int i = 0; i < cameras.Length; i++)
-            cameras[i].gameObject.SetActive(i == 0);
+        SetCamera(1);
     }
 
-    void Update()
+    public void TriggerA()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            // Desactivar cámara actual
-            cameras[currentIndex].gameObject.SetActive(false);
+        if (currentCamera == 1) SetCamera(2);
+        else if (currentCamera == 2) SetCamera(1);
+    }
 
-            // Pasar a la siguiente
-            currentIndex = (currentIndex + 1) % cameras.Length;
+    public void TriggerB()
+    {
+        if (currentCamera == 2) SetCamera(3);
+        else if (currentCamera == 3) SetCamera(2);
+    }
 
-            // Activar la nueva
-            cameras[currentIndex].gameObject.SetActive(true);
-        }
+    private void SetCamera(int index)
+    {
+        currentCamera = index;
+
+        cam1.gameObject.SetActive(index == 1);
+        cam2.gameObject.SetActive(index == 2);
+        cam3.gameObject.SetActive(index == 3);
     }
 }

@@ -41,7 +41,6 @@ public class MemoryPuzzleManager : MonoBehaviour
         }
 
         revealedTruths.Add(new MemoryEntry(objectName, keyword, truth));
-        Debug.Log($"[MemoryPuzzle] VERDAD REVELADA → {objectName} | KEY: {keyword}");
     }
 
     public bool AllObjectsInteracted()

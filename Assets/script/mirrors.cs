@@ -5,9 +5,9 @@ using UnityEngine;
 public class MirrorState : MonoBehaviour
 {
     [Header("Etapas de grietas (intacto → roto)")]
-    public Material[] crackStages; // arrastrá aquí los materiales
+    public Material[] crackStages; 
     [Header("Audio")]
-    public AudioClip breakSound; // sonido de rotura
+    public AudioClip breakSound; 
     public float breakVolume = 1f;
 
     private Renderer rend;
@@ -25,7 +25,7 @@ public class MirrorState : MonoBehaviour
         audioSource.playOnAwake = false;
 
         if (crackStages.Length > 0)
-            rend.material = crackStages[0]; // espejo intacto al inicio
+            rend.material = crackStages[0]; 
     }
 
     public void AddCrack()
@@ -35,7 +35,6 @@ public class MirrorState : MonoBehaviour
             currentStage++;
             rend.material = crackStages[currentStage];
 
-            // 🎧 Reproducir sonido si se rompió
             if (breakSound != null)
                 audioSource.PlayOneShot(breakSound, breakVolume);
         }

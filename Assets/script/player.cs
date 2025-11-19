@@ -19,22 +19,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Input básico
-        float move = Input.GetAxis("Vertical");    // W/S
-        float turn = Input.GetAxis("Horizontal");  // A/D
 
-        // Movimiento hacia adelante/atrás
+        float move = Input.GetAxis("Vertical");    
+        float turn = Input.GetAxis("Horizontal");  
+
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         controller.SimpleMove(forward * move * moveSpeed);
 
-        // Rotación en el eje Y
         transform.Rotate(0, turn * rotationSpeed * Time.deltaTime, 0);
 
-        // Animaciones
-        // Speed = magnitud del movimiento (positivo = caminar, 0 = idle)
         animator.SetFloat("speed", Mathf.Abs(move));
 
-        // Turn = se puede usar para blend si tenés animaciones de giro
         animator.SetFloat("turn", turn);
     }
 
@@ -44,7 +39,6 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetBool("inspecting", true);
 
-        // volver a Idle después de 2 segundos
         Invoke("StopInspecting", 2.0f);
     }
 

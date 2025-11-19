@@ -48,7 +48,6 @@ public class DialogueManager : MonoBehaviour
     {
         currentObject = obj;
 
-        // Si la verdad ya se reveló
         if (obj.revealedTruth)
         {
             ShowTemporaryMessage(obj.trueMemory, 3.5f);
@@ -136,7 +135,6 @@ public class DialogueManager : MonoBehaviour
             fogController?.DecreaseDensity();
         }
 
-        // Si se interactuó con todos los objetos y hablamos con Virgilio
         if (MemoryPuzzleManager.Instance.AllObjectsInteracted() && virgilioAfterAllObjects)
         {
             currentObject.RevealTruth();
